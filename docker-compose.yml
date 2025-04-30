@@ -12,6 +12,7 @@ services:
     build: ./backend
     volumes:
       - ./backend:/var/www
+      - /var/www/vendor #venderが./backendによる上書きによって消えるから追加
     ports:
       - '8000:8000'
     working_dir: /var/www

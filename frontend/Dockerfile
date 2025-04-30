@@ -1,16 +1,20 @@
-FROM node:18-alpine
+# ベースイメージ（Node.js）
+FROM node:18
 
+# 作業ディレクトリを設定
 WORKDIR /app
 
-# 依存ファイルをコピーしてインストール
-COPY package.json package-lock.json* ./
+# package.json と package-lock.json をコピー
+COPY package*.json ./
+
+# 依存関係のインストール
 RUN npm install
 
-# ソースコードをコピー
+# アプリケーションコードをコピー
 COPY . .
 
-# ポート3000を開放
+# ポート3000を開ける
 EXPOSE 3000
 
-# 開発用サーバーを起動
+# 開発サーバーを起動
 CMD ["npm", "run", "dev"]
