@@ -24,10 +24,16 @@
     "eslint-config-next": "15.3.1",
     "tailwindcss": "^4",
     "typescript": "^5"
+<<<<<<< HEAD
   },
   "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).",
   "main": "index.js",
   "keywords": [],
   "author": "",
   "license": "ISC"
+=======
+  }
+
+  
+>>>>>>> 1f1ba61 (ログイン画面とパスワードリセット試作作成)
 }

@@ -2,7 +2,7 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - '3000:3000'
+      - '3001:3000'
     volumes:
       - ./frontend:/app
       - /app/node_modules
@@ -14,7 +14,7 @@ services:
     build: ./backend
     volumes:
       - ./backend:/var/www
-      - /var/www/vendor #venderが./backendによる上書きによって消えるから追加
+
     ports:
       - '8000:8000'
     working_dir: /var/www
@@ -28,8 +28,8 @@ services:
     environment:
       MYSQL_DATABASE: seo_db
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
     volumes:
       - db_data:/var/lib/mysql
     ports:

@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # ポート3000を開ける
-EXPOSE 3000
+EXPOSE 3001
 
 # 開発サーバーを起動
 CMD ["npm", "run", "dev"]
